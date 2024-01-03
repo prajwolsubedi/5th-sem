@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>jquery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+
+        </script>
+        <script>
+            $(document).ready(function(){
+                function show1(){
+                    $("#p1").show();
+                }
+                function hide1(){
+                    document.write("xyaa");
+                    $("#p1").hide();
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <p id="p1">Hello</p>
+        <input type="button" value="SHOW" onclick="show1();">
+        <input type="button" value="HIDE" onclick="hide1();">
+    </body>
+</html>
+
+<!-- <html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Click me to hide paragraphs</button>
+
+</body>
+</html> -->

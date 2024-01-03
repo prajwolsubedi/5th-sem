@@ -1,0 +1,37 @@
+<html>
+    <head><title>javascript cookies</title></head>
+    <body>
+        <script>
+             function setcookie(){
+                //set cookies
+                var namevalue=document.getElementById("t1").value;
+                document.cookie="name= "+namevalue;
+                document.write("Setting cookies: "+ "name= " + namevalue);
+                //access cookies
+                var allcookies=document.cookie;
+                document.write("all cookies: "+allcookies);
+                // setting cookies expiry date
+                var now=new Date();
+               now.setMonth(now.getMonth()+1);
+                document.cookie="expires= "+ now;
+                document.write("Setting cookies: "+ "name= " + namevalue + "expires: "+now);
+
+                //deleting cookies
+                now.setMonth(now.getMonth()-1);
+                document.cookie="expires= "+now;
+                //to check
+                allcookies=document.cookie;
+                docuemnt.write(allcookies);
+
+             }
+        </script>
+
+        <form  action="">
+            <label>Enter your name: </label>
+            <input type="text" id="t1">
+            <input type="button" value="Submit" onclick="setcookie();">
+        </form>
+       
+
+    </body>
+</html>

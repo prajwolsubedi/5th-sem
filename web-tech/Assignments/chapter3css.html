@@ -1,0 +1,150 @@
+
+
+
+
+
+
+<html>
+    <head>
+        <title>CSS</title>
+        <link rel="stylesheet" href="C:\Users\ASUS\Desktop\FIFTH SEM\Web tech\Assignments\style.css">
+        
+    </head>
+   
+<body>
+    <h1>Charles Babbage</h1>
+
+    <p id="p1">Charles Babbage KH FRS (26 December 1791 – 18 October 1871) was an English mathematician, philosopher, <br>
+        inventor and mechanical engineer, Babbage originated the concept of a digital programmable computer.</p>
+    <p class="c1">Babbage is credited with inventing the first mechanical computer, the Difference Engine, that eventually <br>
+        led to more complex electronic designs</p>
+    <div>
+        <p>-famous for initiating the idea of a programmable computer</p>
+        <section><p>-inventing the world's first mechanical computer</p></section>
+    </div>
+    <p>His parents were called Benjamin Babbage and Betsy Plumleigh Teape</p>
+    <p>His father worked in London for Praed's & Co as a banking partner</p>
+
+    <div id="div1">
+       
+        Birthdate:26 December 1791 <br>
+        Death date:18 October 1871 <br>
+        Associated organizations: <br>
+                Cambridge University <br>
+                Fields of study <br>
+                Mathematics, Computing <br>
+                <p>Babbage lived and worked for over 40 years at 1 Dorset Street, Marylebone, where he died, at the age of 79, on 18 October 1871; he was buried in London's Kensal Green Cemetery.</p>
+    </div>
+    <br><br>
+   
+
+    
+    <style>
+        /* 10)	Selectors
+        a)	Universal selector
+        b)	Type selector
+        c)	Class selector
+        d)	Id Selector
+        e)	descendent selector
+        f)	Child selector
+        g)	Adjacent sibling selector
+        h)	General sibling selector  */
+        
+        *{
+            margin:2px;
+            padding:2px;
+            
+        }
+        h1{
+             font-style:bold;
+             
+            
+                
+        }
+        
+
+        .c1{
+            
+            padding-left:23px;
+        }
+
+        #p1{
+            margin-top:10px;
+            font-style:italic;
+
+        }
+        div p{
+            background-color:darkred;
+        }
+
+        div > p{
+            color:burlywood;
+        }
+        /* adjacent sibling selector only apply property on those which are just after that section */
+        div + p{
+            background-color:darkblue;
+        }
+        div ~ p{
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+
+        /* 11)	Background (color, image,position,size,repeat) */
+        *{
+            color:white;
+            background-color:black;
+            background-image:url("charlesbabbagepic.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position:right;
+            background-size: 400px;
+        }
+        /* 12)	Border(style,color,width,radius) */
+        h1{
+            border-style: solid;
+             border-radius: 2px;
+             border-width:thin;
+             border-color: khaki;
+        }
+        
+
+        /* 13)	Box layout( content,padding,border,margin) */
+        #div1{
+            background-color: darkgreen;
+            width: 300px;
+            border: 15px solid;
+            padding: 50px;
+             margin: 20px;
+              /* 6)	 Positioning: Relative, Float, Absolute. */
+              position:absolute;
+               /* 7)	 Box Shadows,  */
+               box-shadow: 5px 5px royalblue;
+                
+            
+        }
+        /* 8)	Text Effects and Text shadow */
+        #div1>p{
+            white-space: nowrap;
+            border:solid;
+            width:40px;
+            height:20px;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            
+            
+        }
+        #div1>p:hover{overflow:visible;}
+
+        /* 9. Media query */
+        /* aba yo code ma if 200px vnda sano vyo vne screen balla tyo property le kaam grxa */
+        @media screen and (max-width: 200px) {
+        body {
+            background-color:green;
+        }
+        }
+        
+
+    </style>
+    
+</body>
+   
+</html>

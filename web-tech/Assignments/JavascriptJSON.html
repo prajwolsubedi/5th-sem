@@ -1,0 +1,76 @@
+<!-- <html>
+    <head><title> JSON</title>
+       // <script>
+            // var j={
+            //     "name":"roshni",
+            //     "address":"Kathmandu",
+            //     "number":123
+            // }
+            // // document.write(j.name);
+            // // document.write(j.address);
+            // // document.write(j.number);
+            // var data=JSON.parse(j);
+            // document.write(data.name);
+                //JavaScript to illustrate JSON.parse() method.  
+// var j = '{"Name":"Krishna","Email": "XYZ", "CN": "12345"}';  
+// var data = JSON.parse(j);  
+// document.write("Convert json object in data using parse method<br>");  
+// document.write(data.Name); //expected output: XYZ  
+  
+// //JavaScript to illustrate JSON.stringify() method.  
+// var j = {Name:"Krishna",  
+// Email: "XYZ", CN : 12345};  
+// var data = JSON.stringify(j);  
+// document.write("<br>Convert string in JSON format using stringify()  method<br>");  
+// document.write(data);
+
+// function keyboard(){
+//     alert("You pressed key");
+// }
+// // function loadvayo(){
+// //     document.write("Page is loaded");
+// // }
+//      function sheclick(){
+//         alert("She clicks me");
+//      }      
+
+
+   //</script>
+        
+</head>
+<body>
+        
+//         <label>Enter your name: </label>
+//         <input type="text" onkeypress="keyboard();">
+//         <input type="button" value="clickme" onmouseoveru="sheclick();"> -->
+        
+    <!-- </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Using the XMLHttpRequest Object</h2>
+
+<div id="demo">
+<button type="button" onclick="loadXMLDoc()">Change Content</button>
+</div>
+
+<script>
+function loadXMLDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "employee.txt", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>

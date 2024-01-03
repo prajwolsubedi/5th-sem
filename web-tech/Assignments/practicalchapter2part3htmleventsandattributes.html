@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>html events and attributes</title>
+    </head>
+
+   
+    <!-- windows event attribute onbeforeprint -->
+    <!-- <body onbeforeprint="fun()">
+        <h1>HI</h1>
+        
+        <script>
+            function fun() {
+              alert("This document is now being printed");
+            }
+        </script> -->
+     
+
+    <!-- form event attributes -->
+    <!-- <label> Enter your name: </label>
+    <input type="text" id="fname" onblur="myFunction()">
+        <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+        <Script>
+            function myFunction(){
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+            }
+        </Script>  -->
+
+    
+            <!-- keyboard event attributes onkeydown-->
+
+            <!-- <input type="text" onkeydown="key()">
+            <script>
+                function key(){
+                    alert("you pressed the button on the keyboard");
+                }
+            </script>  -->
+
+            <!-- mouse event attributes -->
+             <!-- <button onclick="myFunction()">Click me</button>
+            <script>
+                function myFunction(){
+                    document.write("Hello");
+                }
+            </script> -->
+
+             <!-- clipboard event attributes-->
+            <!-- <p id="p1">oncopy Event</p>
+            <input type="text" oncopy="oncopyFun1()" value="ROSHNI">
+            <script>
+                function oncopyFun1()
+            {
+                document.getElementById("p1").innerHTML ="You copied from input text!"
+            }
+            
+            </script>
+            <br><br>  -->
+
+            <!-- media event attributes -->
+
+            <p>Play the video.</p>
+            <video id="myVideo" width="320" height="176" controls onplay="onplayFun()" onpause="onpausefun()">
+            <source src = "C:\Users\ASUS\Desktop\FIFTH SEM\Web tech\Assignments\videoplayback.mp4" type="video/mp4">
+            </video>
+            <p id='p2'></p>
+            <p id='p3'></p>
+            
+            <script>
+                
+                function onplayFun()
+                {
+                document.getElementById('p2').innerHTML = "The video is playing";
+                }
+                function onpausefun()
+                {
+                document.getElementById('p3').innerHTML = "The video file has been paused";
+                }
+            </script>
+
+            
+            
+
+
+    </body>
+
+</html>

@@ -1,0 +1,111 @@
+<html>
+    <head>
+       
+    </head>
+
+    <body>
+        
+        <form onsubmit="return validation();" action="">
+            username: <input type="text" name="uname" id="uname" placeholder="enter your name here">
+            <br><br>
+            password: <input type="password" name="pass" id="pw" placeholder="enter password">
+            <br><br>
+            email id: <input type="text"name="email" id="eid" placeholder="enter email">
+            <br><br>
+            phone no: <input type="text" name="phone" id="pid" placeholder="enter your phone number">
+            <br><br>
+            Gender: <input type="radio" name="Male" id="rb1" value="male">Male
+             <input type="radio" name="female" id="rb2" value="female">Female
+            <br><br>
+            Course: <input type="checkbox" name="java" id="cb1" value="java">java
+            &nbsp;
+            <input type="checkbox" name="c" id="cb2" value="c programming">c programming
+            &nbsp;
+
+            <br><br>
+            Country:
+            <select  id="s1">
+                <option value="1">Nepal</option>
+                <option value="2">India</option>
+                <option value="3">Pakistan</option>
+            </select>
+            <input type="submit" value="submit">
+
+        </form>
+
+        <script>
+            function validation()
+            {
+                var username=document.getElementById("uname").value;
+                var password=document.getElementById("pw").value;
+                var email=document.getElementById("eid").value;
+                var phone=document.getElementById("pid").value;
+                var rb11=document.getElementById("rb1").value;
+                var rb22=document.getElementById("rb2").value;
+                var cb11=document.getElementById("cb1").value;
+                var cb22=document.getElementById("cb2").value;
+                var country=document.getElementById("s1").value;
+                var atpos=email.indexOf("@");
+                var dotpos=email.indexOf(".");
+                var pattern="/^[a-zA-Z]+$/";
+                document.write("username");
+    
+                // aba form tw varyo bt text field khali xa ki vareko xa check garna
+                if(username.trim()==""||password.trim()==""||email.trim()==""||phone.trim()=="")//mandatory 
+               // fields khali xa ki xaenw check grnu basic validation ho(kunai pani fields empty xa xaewn check
+               //garnu basic validation ma parxa)
+                {
+                    alert("Fill username,password,email,and phone number");
+                    return false;
+                }
+                //chekbox rw radio lai id bata ni compare garna milxa
+                else if(rb1.checked==false && rb2.checked==false)
+                {
+                    alert("Select option");
+                    return false;
+                }
+                else if(cb1.checked==false &&cb2.checked==false)
+                {
+                    alert("Select course");
+                    return false;
+                }
+               
+                else if(username.trim().length<5 || username.trim().length>25)// trim le chai if bich ma spaces haru xa 
+                    //vne tyo hatayerw count gardinxa
+                {
+                    alert("Incorrect username");
+                    return false;
+                }
+                else if(NAN(phone)==0){
+                    alert("Enter phonenumber");
+                    return false;
+                }
+                else if(password.trim().length<4 || username.trim().length>25)
+                {
+                    alert("weak password");
+                    return false;
+                }
+                else if(atpos<1||(dotpos-atpos)!=6){
+                        alert("please enter correct email");
+                        return false;
+                    }
+                
+                    //user name should only contain alphabets
+                
+                else if(!(username.match(pattern))){
+                    alert("username should only contain alphabets");
+                    return false;
+                }
+                
+                
+                 else{
+                    alert("Successfully submitted");
+                    return true;
+                }
+
+            }
+                
+    
+            </script>
+    </body>
+</html>
