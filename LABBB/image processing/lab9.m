@@ -1,0 +1,20 @@
+% Take gray image or change rgb to gray first if image is in rgb
+img = imread('img/redrose.jpg');
+gray_img = rgb2gray(img);
+double_img = double(gray_img);
+first_plane = bitget(double_img,1);
+subplot(4,2,1); imshow(first_plane); title('LSB Plane');
+second_plane = bitget(double_img,2);
+subplot(4,2,2); imshow(second_plane); title('2nd Plane');
+third_plane = bitget(double_img,3);
+subplot(4,2,3); imshow(third_plane); title('3rd Plane');
+fourth_plane = bitget(double_img,4);
+subplot(4,2,4); imshow(fourth_plane); title('4th Plane');
+fifth_plane = bitget(double_img,5);
+subplot(4,2,5); imshow(fifth_plane); title('5th Plane');
+sixth_plane = bitget(double_img,6);
+subplot(4,2,6); imshow(fifth_plane); title('6th Plane');
+seventh_plane = bitget(double_img,7);
+subplot(4,2,7); imshow(seventh_plane); title('7th Plane');
+eighth_plane = bitget(double_img,8);
+subplot(4,2,8); imshow(eighth_plane); title('MSB Plane');
